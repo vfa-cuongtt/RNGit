@@ -8,8 +8,9 @@ export default class Box extends Component {
   }
   render() {
     return (
-      <View style={[style.box4, style.colorBlue]}>
-        <Image style={style.icon} source={this.props.imageUrl}></Image>
+      <View style={[style.box4]}>
+        <Image style={style.icon} source={this.props.image.url} />
+        <Text style={style.title}>{this.props.image.title}</Text>
       </View>
     );
   }
@@ -22,6 +23,7 @@ const style = StyleSheet.create({
     borderRadius: 10,
     justifyContent: 'center',
     alignItems: 'center',
+    flexDirection: 'row',
   },
   colorBlue: {
     backgroundColor: '#3D85C6',
@@ -30,5 +32,8 @@ const style = StyleSheet.create({
     width: 50,
     height: 50,
     borderRadius: 50,
+  },
+  title: {
+    paddingLeft: 10,
   },
 });
