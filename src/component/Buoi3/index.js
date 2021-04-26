@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, ScrollView} from 'react-native';
 import TopBox from '../Buoi4/TopBox';
 import BoxBottom from '../Buoi4/BoxBottom';
 
@@ -10,10 +10,12 @@ export default class Buoi3 extends Component {
         <View style={[style.box1, style.colorGreen]}>
           <TopBox />
         </View>
+        {/* <ScrollView> */}
         <View style={[style.box1, style.colorPurple]}>
           <BoxBottom />
           <BoxBottom />
         </View>
+        {/* </ScrollView> */}
       </View>
     );
   }

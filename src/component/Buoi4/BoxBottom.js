@@ -1,23 +1,27 @@
 import React, {Component} from 'react';
-import {Text, View, StyleSheet} from 'react-native';
+import {Text, View, StyleSheet, ScrollView} from 'react-native';
 import Box from './Box';
 
 const imageUrl = [
   {
     id: 1,
     url: require('../../../assets/shoe2.jpg'),
+    title: 'giay moi mua doi 1',
   },
   {
     id: 2,
     url: require('../../../assets/shoe3.jpg'),
+    title: 'giay moi mua doi 2',
   },
   {
     id: 3,
-    url: require('../../../assets/shoe3.jpg'),
+    url: require('../../../assets/shoe4.jpg'),
+    title: 'giay moi mua doi 3',
   },
   {
     id: 4,
-    url: require('../../../assets/shoe4.jpg'),
+    url: require('../../../assets/shoe5.jpg'),
+    title: 'giay moi mua doi 4',
   },
 ];
 
@@ -27,9 +31,8 @@ export default class BoxBottom extends Component {
       <View style={style.box3}>
         {[...imageUrl].map((item, key) => {
           //   console.log('item', item);
-          return <Box key={key} imageUrl={item.url} />;
+          return <Box key={key} image={item} />;
         })}
-        {/* <Box imageUrl={imageUrl} />; */}
       </View>
     );
   }
