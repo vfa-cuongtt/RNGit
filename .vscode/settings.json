@@ -1,0 +1,23 @@
+
+ {
+    "eslint.format.enable": true,
+    "eslint.codeAction.showDocumentation": {
+      "enable": true
+    },
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "eslint.validate": ["javascript", "javascriptreact"],
+    "editor.formatOnSave": true,
+    "colorize.languages": [
+      "javascript",
+      "javascriptreact"
+    ],
+    "colorize.colorized_colors": [
+      "HEXA",
+      "BROWSERS_COLORS",
+      "ARGB",
+      "RGB"
+    ]
+  }
+  
