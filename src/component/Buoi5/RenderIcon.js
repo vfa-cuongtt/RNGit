@@ -19,12 +19,6 @@ const iconUrl = [
 ];
 
 export default class RenderIcon extends Component {
-  renderIcon = () => {
-    return iconUrl.map((item, index) => {
-      return <IconButton icon={item.url} />;
-    });
-  };
-
   state = {
     icon: require('../../../assets/icon/angry.png'),
   };
@@ -32,6 +26,18 @@ export default class RenderIcon extends Component {
   handChangeIcon = icon => {
     this.setState({
       icon,
+    });
+  };
+
+  renderIcon = () => {
+    return iconUrl.map((item, index) => {
+      return (
+        <IconButton
+          key={index}
+          icon={item.url}
+          changeIcon={icon => this.handChangeIcon(icon)}
+        />
+      );
     });
   };
 

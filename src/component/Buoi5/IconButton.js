@@ -2,10 +2,17 @@ import React, {Component} from 'react';
 import {Text, TouchableOpacity, Image, StyleSheet} from 'react-native';
 
 export default class IconButton extends Component {
+  handChangeIcon = icon => {
+    const {changeIcon} = this.props;
+    changeIcon(icon);
+  };
+
   render() {
     console.log(this.props);
     return (
-      <TouchableOpacity style={styles.buttonIcon}>
+      <TouchableOpacity
+        style={styles.buttonIcon}
+        onPress={() => this.handChangeIcon(this.props.icon)}>
         <Image style={styles.buttonIcon} source={this.props.icon} />
       </TouchableOpacity>
     );
