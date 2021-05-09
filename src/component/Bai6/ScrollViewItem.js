@@ -4,18 +4,29 @@ import {View, Text, StyleSheet, ScrollView} from 'react-native';
 export default class ScrollViewItem extends Component {
   listItem = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
+  renderItem = () => {
+    return this.listItem.map((i, index) => {
+      return (
+        <View
+          style={[
+            styles.item,
+            {
+              backgroundColor: `#${Math.floor(
+                Math.random() * 16777215,
+              ).toString(16)}`,
+            },
+          ]}
+          key={index}>
+          <Text>Item {i}</Text>
+        </View>
+      );
+    });
+  };
+
   render() {
     return (
       <View style={styles.container}>
-        <ScrollView>
-          {this.listItem.map(i => {
-            return (
-              <View style={styles.item}>
-                <Text>Item {i}</Text>
-              </View>
-            );
-          })}
-        </ScrollView>
+        <ScrollView>{this.renderItem()}</ScrollView>
       </View>
     );
   }
@@ -34,6 +45,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 10,
-    backgroundColor: `#${Math.floor(Math.random() * 16777215).toString(16)}`,
   },
 });

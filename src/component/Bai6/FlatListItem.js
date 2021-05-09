@@ -16,7 +16,15 @@ export default class FlatListItem extends Component {
   renderItem = ({item}) => {
     console.log('item', item);
     return (
-      <View style={styles.item}>
+      <View
+        style={[
+          styles.item,
+          {
+            backgroundColor: `#${Math.floor(Math.random() * 16777215).toString(
+              16,
+            )}`,
+          },
+        ]}>
         <Text>item {item.data}</Text>
       </View>
     );
@@ -25,6 +33,11 @@ export default class FlatListItem extends Component {
     return (
       <View style={styles.container}>
         <FlatList
+          // horizontal={true}
+          refreshing={true}
+          onRefresh={() => {
+            console.log('refresh call');
+          }}
           data={this.listItem}
           keyExtractor={item => {
             console.log('test', item);

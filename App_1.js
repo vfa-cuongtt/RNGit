@@ -5,13 +5,14 @@ import RenderWithState from './src/component/Buoi5/RenderWithState';
 import RenderIcon from './src/component/Buoi5/RenderIcon';
 import ScrollViewItem from './src/component/Bai6/ScrollViewItem';
 import FlatListItem from './src/component/Bai6/FlatListItem';
+import SectionListItem from './src/component/Bai6/SectionListItem';
 
-const App = () => {
-  // return <Buoi3 />;
-  // return <Touched />;
-  // return <RenderIcon />;
-  // return <ScrollViewItem />;
-  return <FlatListItem />;
-};
-
+const App = () => (
+  // <Buoi3 />;
+  // <Touched />;
+  // <RenderIcon />;
+  // <ScrollViewItem />;
+  // <FlatListItem />;
+  <SectionListItem />
+);
 export default App;
