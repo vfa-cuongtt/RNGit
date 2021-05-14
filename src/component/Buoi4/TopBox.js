@@ -7,7 +7,7 @@ export default class TopBox extends Component {
       <View style={[style.box2, style.colorYellow]}>
         <Image
           style={style.icon}
-          source={require('../../../assets/shoe1.jpg')}></Image>
+          source={require('../../../assets/Shoe/shoe1.jpg')}></Image>
         {/* <Text>aaaa</Text> */}
       </View>
     );

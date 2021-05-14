@@ -6,13 +6,14 @@ import RenderIcon from './src/component/Buoi5/RenderIcon';
 import ScrollViewItem from './src/component/Bai6/ScrollViewItem';
 import FlatListItem from './src/component/Bai6/FlatListItem';
 import SectionListItem from './src/component/Bai6/SectionListItem';
-
+import BaiTapOanTuXi from './src/component/Buoi8/index';
 const App = () => (
   // <Buoi3 />;
   // <Touched />;
   // <RenderIcon />;
   // <ScrollViewItem />;
   // <FlatListItem />;
-  <SectionListItem />
+  // <SectionListItem />
+  <BaiTapOanTuXi />
 );
 export default App;

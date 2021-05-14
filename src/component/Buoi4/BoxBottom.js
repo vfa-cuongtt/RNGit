@@ -5,22 +5,22 @@ import Box from './Box';
 const imageUrl = [
   {
     id: 1,
-    url: require('../../../assets/shoe2.jpg'),
+    url: require('../../../assets/Shoe/shoe2.jpg'),
     title: 'giay moi mua doi 1',
   },
   {
     id: 2,
-    url: require('../../../assets/shoe3.jpg'),
+    url: require('../../../assets/Shoe/shoe3.jpg'),
     title: 'giay moi mua doi 2',
   },
   {
     id: 3,
-    url: require('../../../assets/shoe4.jpg'),
+    url: require('../../../assets/Shoe/shoe4.jpg'),
     title: 'giay moi mua doi 3',
   },
   {
     id: 4,
-    url: require('../../../assets/shoe5.jpg'),
+    url: require('../../../assets/Shoe/shoe5.jpg'),
     title: 'giay moi mua doi 4',
   },
 ];
