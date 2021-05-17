@@ -86,25 +86,35 @@ export default class BaiTapOanTuXi extends Component {
   onPressPlayButton = () => {
     // thuc hien lien tuc 1 khoang thoi gian
     this.setState({disable: true});
-    const random = setInterval(() => {
-      this.state.botSelect.image = this.state.arrayGame[
-        Math.floor(Math.random() * 3)
-      ].image;
-      this.setState({
-        botSelect: this.state.botSelect,
-      });
-    }, 100);
 
+    const random = setInterval(() => {
+      this.state.botSelect = this.state.arrayGame[
+        Math.floor(Math.random() * 3)
+      ];
+      this.setState(
+        {
+          botSelect: this.state.botSelect,
+        },
+        () => {
+          // console.log(this.state.botSelect);
+        },
+      );
+    }, 100);
     setTimeout(() => {
       clearInterval(random);
       let times, score;
       switch (this.state.playerSelect.id) {
         case 'paper':
           if (this.state.botSelect.id === 'paper') {
+            score = this.state.score;
             times = this.state.times - 1;
           } else if (this.state.botSelect.id === 'scissor') {
-            score = this.state.score - 1;
-            times = this.state.times - 1;
+            if (this.state.score > 0) {
+              score = this.state.score - 1;
+            }
+            if (this.state.times > 0) {
+              times = this.state.times - 1;
+            }
           } else {
             score = this.state.score + 1;
             times = this.state.times + 1;
@@ -112,10 +122,15 @@ export default class BaiTapOanTuXi extends Component {
           break;
         case 'scissor':
           if (this.state.botSelect.id === 'scissor') {
+            score = this.state.score;
             times = this.state.times - 1;
           } else if (this.state.botSelect.id === 'rock') {
-            score = this.state.score - 1;
-            times = this.state.times - 1;
+            if (this.state.score > 0) {
+              score = this.state.score - 1;
+            }
+            if (this.state.times > 0) {
+              times = this.state.times - 1;
+            }
           } else {
             score = this.state.score + 1;
             times = this.state.times + 1;
@@ -123,23 +138,43 @@ export default class BaiTapOanTuXi extends Component {
           break;
         case 'rock':
           if (this.state.botSelect.id === 'rock') {
+            score = this.state.score;
             times = this.state.times - 1;
           } else if (this.state.botSelect.id === 'paper') {
-            score = this.state.score - 1;
-            times = this.state.times - 1;
+            if (this.state.score > 0) {
+              score = this.state.score - 1;
+            }
+            if (this.state.times > 0) {
+              times = this.state.times - 1;
+            }
           } else {
             score = this.state.score + 1;
             times = this.state.times + 1;
           }
           break;
-        default:
-          break;
       }
+      this.setState({disable: false, times, score}, () => {
+        console.log('score-time', this.state.score, this.state.times);
+      });
+    }, 1000);
 
-      // C2 dung 1 bien Count++ đếm cái count nếu count > 1 số nhất định thì sẽ clearInterval
+    // let count = 0;
+    // if (count < 10) {
+    //   const random = setInterval(() => {
+    //     this.state.botSelect.image = this.state.arrayGame[
+    //       Math.floor(Math.random() * 3)
+    //     ].image;
+    //     count++;
+    //     this.setState({
+    //       botSelect: this.state.botSelect,
+    //     });
+    //   }, 100);
 
-      this.setState({disable: false, times, score});
-    }, 5000);
+    //   console.log('count tang', count);
+    // } else {
+    //   console.log('count dung', count);
+    //   this.setState({disable: false});
+    // }
   };
 
   render() {
