@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Text, StyleSheet, View, TouchableOpacity} from 'react-native';
-import LinearGradient from 'react-native-linear-gradient';
+// import LinearGradient from 'react-native-linear-gradient';
 
 export default class ResultContent extends Component {
   render() {
@@ -14,22 +14,22 @@ export default class ResultContent extends Component {
           <TouchableOpacity
             disabled={this.props.disable}
             onPress={this.props.onPressPlayButton}>
-            <LinearGradient
+            {/* <LinearGradient
               start={{x: 0.0, y: 0.25}}
               end={{x: 0.5, y: 1.0}}
               style={[styles.button]}
-              colors={this.props.disable ? ['#bbb'] : ['#864686', '#ff9aff']}>
-              <Text style={styles.buttonText}>Play</Text>
-            </LinearGradient>
+              colors={this.props.disable ? ['#bbb'] : ['#864686', '#ff9aff']}> */}
+            <Text style={styles.buttonText}>Play</Text>
+            {/* </LinearGradient> */}
           </TouchableOpacity>
           <TouchableOpacity>
-            <LinearGradient
+            {/* <LinearGradient
               start={{x: 0.0, y: 0.25}}
               end={{x: 0.5, y: 1.0}}
               style={[styles.button]}
-              colors={['#bf9f36', '#ffce36']}>
-              <Text style={styles.buttonText}>Reset</Text>
-            </LinearGradient>
+              colors={['#bf9f36', '#ffce36']}> */}
+            <Text style={styles.buttonText}>Reset</Text>
+            {/* </LinearGradient> */}
           </TouchableOpacity>
         </View>
       </View>
