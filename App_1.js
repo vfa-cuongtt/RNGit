@@ -11,6 +11,9 @@ import DemoRedux from './src/component/Buoi9Redux/index';
 import {Provider} from 'react-redux';
 import store from './src/component/Buoi9Redux/redux/store';
 import BaiTapRedux from './src/component/Buoi9Redux/BaiTapRedux/BaiTapRedux';
+import Lifecycle from './src/component/Lifecycle';
+import BaiTapLifecycle from './src/component/Lifecycle/BaiTap/BaiTapLifecycle';
+
 const App = () => (
   // <Buoi3 />;
   // <Touched />;
@@ -21,7 +24,9 @@ const App = () => (
   // <BaiTapOanTuXi />
   <Provider store={store}>
     {/* <DemoRedux /> */}
-    <BaiTapRedux />
+    {/* <BaiTapRedux /> */}
+    {/* <Lifecycle /> */}
+    <BaiTapLifecycle />
   </Provider>
 );
 export default App;
