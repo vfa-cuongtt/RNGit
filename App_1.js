@@ -6,6 +6,13 @@ import RenderIcon from './src/component/Buoi5/RenderIcon';
 import ScrollViewItem from './src/component/Bai6/ScrollViewItem';
 import FlatListItem from './src/component/Bai6/FlatListItem';
 import SectionListItem from './src/component/Bai6/SectionListItem';
+import BaiTapOanTuXi from './src/component/Buoi8/index';
+import DemoRedux from './src/component/Buoi9Redux/index';
+import {Provider} from 'react-redux';
+import store from './src/component/Buoi9Redux/redux/store';
+import BaiTapRedux from './src/component/Buoi9Redux/BaiTapRedux/BaiTapRedux';
+import Lifecycle from './src/component/Lifecycle';
+import BaiTapLifecycle from './src/component/Lifecycle/BaiTap/BaiTapLifecycle';
 
 const App = () => (
   // <Buoi3 />;
@@ -13,6 +20,13 @@ const App = () => (
   // <RenderIcon />;
   // <ScrollViewItem />;
   // <FlatListItem />;
-  <SectionListItem />
+  // <SectionListItem />
+  // <BaiTapOanTuXi />
+  <Provider store={store}>
+    {/* <DemoRedux /> */}
+    {/* <BaiTapRedux /> */}
+    {/* <Lifecycle /> */}
+    <BaiTapLifecycle />
+  </Provider>
 );
 export default App;
