@@ -13,6 +13,9 @@ import store from './src/component/Buoi9Redux/redux/store';
 import BaiTapRedux from './src/component/Buoi9Redux/BaiTapRedux/BaiTapRedux';
 import Lifecycle from './src/component/Lifecycle';
 import BaiTapLifecycle from './src/component/Lifecycle/BaiTap/BaiTapLifecycle';
+import Validation from './src/component/Validation/index';
+import ValidationFormik from './src/component/Validation/ValidationFormik';
+import RootNavigator from './src/component/Navigation';
 
 const App = () => (
   // <Buoi3 />;
@@ -26,7 +29,10 @@ const App = () => (
     {/* <DemoRedux /> */}
     {/* <BaiTapRedux /> */}
     {/* <Lifecycle /> */}
-    <BaiTapLifecycle />
+    {/* <BaiTapLifecycle /> */}
+    {/* <Validation /> */}
+    {/* <ValidationFormik /> */}
+    <RootNavigator />
   </Provider>
 );
 export default App;
