@@ -16,6 +16,7 @@ import BaiTapLifecycle from './src/component/Lifecycle/BaiTap/BaiTapLifecycle';
 import Validation from './src/component/Validation/index';
 import ValidationFormik from './src/component/Validation/ValidationFormik';
 import RootNavigator from './src/component/Navigation';
+import LearnHook from './src/component/Hook';
 
 const App = () => (
   // <Buoi3 />;
@@ -32,7 +33,9 @@ const App = () => (
     {/* <BaiTapLifecycle /> */}
     {/* <Validation /> */}
     {/* <ValidationFormik /> */}
-    <RootNavigator />
+    {/* <RootNavigator />
+     */}
+    <LearnHook />
   </Provider>
 );
 export default App;
