@@ -28,13 +28,13 @@ const LearnHook = () => {
       <TouchableOpacity style={styles.button} onPress={onPress}>
         <Text>Count Up</Text>
       </TouchableOpacity>
-      <TouchableOpacity
+      {/* <TouchableOpacity
         style={styles.button}
         onPress={() => {
           setUserName('Hello');
         }}>
         <Text>Set Name</Text>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
     </View>
   );
 };

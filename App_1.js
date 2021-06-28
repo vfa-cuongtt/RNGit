@@ -17,7 +17,8 @@ import Validation from './src/component/Validation/index';
 import ValidationFormik from './src/component/Validation/ValidationFormik';
 import RootNavigator from './src/component/Navigation';
 import LearnHook from './src/component/Hook';
-
+import Parent from './src/component/BaiTapHook/Parent';
+import BaiTapColor from './src/component/BaiTapHook/BaiTapColor';
 const App = () => (
   // <Buoi3 />;
   // <Touched />;
@@ -36,6 +37,8 @@ const App = () => (
     {/* <RootNavigator />
      */}
     <LearnHook />
+    {/* <Parent /> */}
+    {/* <BaiTapColor /> */}
   </Provider>
 );
 export default App;
